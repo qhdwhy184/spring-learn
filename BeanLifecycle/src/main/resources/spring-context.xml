@@ -12,14 +12,5 @@
        http://www.springframework.org/schema/mvc/spring-mvc.xsd
        http://www.springframework.org/schema/aop
        http://www.springframework.org/schema/aop/spring-aop.xsd">
-
-    <mvc:default-servlet-handler />
-    <mvc:annotation-driven/>
-    <context:component-scan base-package="wyhlearn"/>
-    <aop:aspectj-autoproxy/>
-    <bean id="viewResolver"
-          class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/"/>
-        <property name="suffix" value=".jsp"/>
-    </bean>
+    <context:component-scan base-package="BeanLifecycle"/>
 </beans>
