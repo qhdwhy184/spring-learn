@@ -8,7 +8,7 @@
     <artifactId>spring-learn</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>BeanLifecycle</module>
+        <module>bean-lifecycle</module>
     </modules>
     <packaging>pom</packaging>
     <dependencies>
@@ -28,5 +28,21 @@
             <version>1.8.9</version>
         </dependency>
     </dependencies>
+    <build>
+    <plugins>
 
+    <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <executions>
+            <execution>
+                <id>default-compile</id>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </execution>
+        </executions>
+    </plugin>
+    </plugins>
+    </build>
 </project>
