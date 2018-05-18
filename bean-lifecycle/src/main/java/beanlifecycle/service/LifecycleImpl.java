@@ -8,6 +8,9 @@ import javax.annotation.PostConstruct;
 
 @Service
 public class LifecycleImpl implements SmartLifecycle{
+//@Service
+//public class LifecycleImpl implements Lifecycle{
+    private boolean isRunning = false;
     @PostConstruct
     private void postConstruct(){
         System.out.println("LifecycleImpl.postConstruct");
@@ -27,22 +30,25 @@ public class LifecycleImpl implements SmartLifecycle{
     public void stop(Runnable r) {
         System.out.println("stop(Runnable) method of our LifecycleImpl class called..");
         r.run();
+        isRunning = false;
     }
 
     @Override
     public boolean isRunning() {
         System.out.println("isRunning method of our LifecycleImpl class called..");
-        return true;
+        return isRunning;
     }
 
     @Override
     public void start() {
         System.out.println("start method of our LifecycleImpl class called..");
+        isRunning = true;
     }
 
     @Override
     public void stop() {
         System.out.println("stop method of our LifecycleImpl class called..");
+        isRunning = false;
     }
 
     @Override
