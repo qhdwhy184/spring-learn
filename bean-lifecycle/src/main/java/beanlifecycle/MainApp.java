@@ -1,6 +1,6 @@
-package BeanLifecycle;
+package beanlifecycle;
 
-import BeanLifecycle.service.TestService;
+import beanlifecycle.service.TestService;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
