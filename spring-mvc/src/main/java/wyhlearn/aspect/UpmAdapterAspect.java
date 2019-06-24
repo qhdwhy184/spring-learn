@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class UpmAdapterAspect {
 //    private Logger logger = Logger.getLogger(LogMessageId.MONITORING);
 
-    @Around("@annotation(UpmExceptionAdapter)")
+    @Around("@annotation(wyhlearn.annotation.UpmExceptionAdapter)")
     public void logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
         try{
             System.out.println("before call ------------");
