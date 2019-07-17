@@ -7,19 +7,19 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-public class UpmAdapterAspect {
+public class TestExceptionAspect {
 //    private Logger logger = Logger.getLogger(LogMessageId.MONITORING);
 
-    @Around("@annotation(wyhlearn.annotation.UpmExceptionAdapter)")
+    @Around("@annotation(wyhlearn.annotation.TestExceptionAnnotation)")
     public void logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
         try{
             System.out.println("before call ------------");
             joinPoint.proceed();
             System.out.println("end call ------------");
         } catch (Exception e) {
-                //todo logger.error(Logger.SYSLOG_MARKER, ErrorCode.IPFIX_CONFIG_APPLIEDTO_IN_USE.getId(),
-                //todo "Input AppliedTos {} are used by other IpfixConfigs.", displayNames);
-                //todo throw new IpfixException(ErrorCode.IPFIX_CONFIG_APPLIEDTO_IN_USE, displayNames);
+            //todo logger.error(Logger.SYSLOG_MARKER, ErrorCode.IPFIX_CONFIG_APPLIEDTO_IN_USE.getId(),
+            //todo "Input AppliedTos {} are used by other IpfixConfigs.", displayNames);
+            //todo throw new IpfixException(ErrorCode.IPFIX_CONFIG_APPLIEDTO_IN_USE, displayNames);
 //            return e;
         }
     }

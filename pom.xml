@@ -10,6 +10,7 @@
     <modules>
         <module>bean-lifecycle</module>
         <module>spring-mvc</module>
+        <module>spring-aop</module>
     </modules>
     <packaging>pom</packaging>
     <dependencies>
@@ -32,6 +33,16 @@
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jaegertracing</groupId>
+            <artifactId>jaeger-client</artifactId>
+            <version>0.32.0</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>2.0</version>
         </dependency>
     </dependencies>
     <build>
